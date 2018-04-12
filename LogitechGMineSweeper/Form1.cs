@@ -45,9 +45,13 @@ namespace LogitechGMineSweeper
             {
                 comboBox1.SelectedIndex = 1;
             }
-            else
+            else if (MineSweeper.KeyboardLayout == "DE")
             {
                 comboBox1.SelectedIndex = 0;
+            }
+            else
+            {
+                comboBox1.SelectedIndex = 2;
             }
 
             numericUpDown1.Value = Convert.ToDecimal(MineSweeper.Bombs);
@@ -91,9 +95,14 @@ namespace LogitechGMineSweeper
                 MineSweeper.KeyboardLayout = "US";
                 MineSweeper.newGame();
             }
-            else
+            else if (comboBox1.SelectedIndex == 0)
             {
                 MineSweeper.KeyboardLayout = "DE";
+                MineSweeper.newGame();
+            }
+            else
+            {
+                MineSweeper.KeyboardLayout = "UK";
                 MineSweeper.newGame();
             }
 
@@ -140,9 +149,13 @@ namespace LogitechGMineSweeper
             {
                 file = Path.Combine(systemPath, "Logitech MineSweeper/US.txt");
             }
-            else
+            else if (MineSweeper.KeyboardLayout == "DE")
             {
                 file = Path.Combine(systemPath, "Logitech MineSweeper/DE.txt");
+            }
+            else
+            {
+                file = Path.Combine(systemPath, "Logitech MineSweeper/UK.txt");
             }
 
             try
@@ -197,26 +210,20 @@ namespace LogitechGMineSweeper
                 {
                     file = Path.Combine(systemPath, "Logitech MineSweeper/US.txt");
                 }
-                else
+                else if (MineSweeper.KeyboardLayout == "DE")
                 {
                     file = Path.Combine(systemPath, "Logitech MineSweeper/DE.txt");
+                }
+                else
+                {
+                    file = Path.Combine(systemPath, "Logitech MineSweeper/UK.txt");
                 }
 
                 string[] US = File.ReadAllLines(file);
 
                 US[MineSweeper.Bombs] = MineSweeper.Bombs.ToString() + ": " + string.Format("{0:00}:{1:00}",timer.Elapsed.Minutes,timer.Elapsed.Seconds);
 
-                var fileUS = Path.Combine(systemPath, "Logitech MineSweeper/US.txt");
-                var fileDE = Path.Combine(systemPath, "Logitech MineSweeper/DE.txt");
-
-                if (MineSweeper.KeyboardLayout == "US")
-                {
-                    File.WriteAllLines(fileUS, US);
-                }
-                else
-                {
-                    File.WriteAllLines(fileDE, US);
-                }
+                File.WriteAllLines(file, US);
 
                 label5.Text = BestTime(MineSweeper.KeyboardLayout, MineSweeper.Bombs);
             }
@@ -914,12 +921,14 @@ namespace LogitechGMineSweeper
 
                 var fileUS = Path.Combine(systemPath, "Logitech MineSweeper/US.txt");
                 var fileDE = Path.Combine(systemPath, "Logitech MineSweeper/DE.txt");
+                var fileUK = Path.Combine(systemPath, "Logitech MineSweeper/UK.txt");
                 var file = Path.Combine(systemPath, "Logitech MineSweeper/config.txt");
 
                 File.WriteAllLines(file, lines);
 
                 File.WriteAllLines(fileUS, US);
                 File.WriteAllLines(fileDE, US);
+                File.WriteAllLines(fileUK, US);
 
                 label5.Text = "30:00";
                 MineSweeper.Wins = 0;
@@ -948,14 +957,17 @@ namespace LogitechGMineSweeper
                 var systemPath = System.Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData);
                 var directory = Path.Combine(systemPath, "Logitech MineSweeper");
 
+                var fileColors = Path.Combine(systemPath, "Logitech MineSweeper/colors.txt");
                 var fileUS = Path.Combine(systemPath, "Logitech MineSweeper/US.txt");
                 var fileDE = Path.Combine(systemPath, "Logitech MineSweeper/DE.txt");
-                var fileColors = Path.Combine(systemPath, "Logitech MineSweeper/colors.txt");
+                var fileUK = Path.Combine(systemPath, "Logitech MineSweeper/UK.txt");
                 var file = Path.Combine(systemPath, "Logitech MineSweeper/config.txt");
 
                 File.WriteAllLines(file, lines);
+
                 File.WriteAllLines(fileUS, US);
                 File.WriteAllLines(fileDE, US);
+                File.WriteAllLines(fileUK, US);
                 File.WriteAllLines(fileColors, colors);
 
                 MineSweeper.colors = new byte[,] { { 000, 000, 000 }, { 128, 000, 128 }, { 255, 255, 000 }, { 000, 128, 000 }, { 000, 255, 255 }, { 000, 127, 255 }, { 255, 000, 000 }, { 000, 000, 255 }, { 255, 255, 255 }, { 255, 200, 200 }, { 000, 000, 255 }, { 255, 000, 000 }, { 000, 000, 255 }, { 000, 255, 255 }, { 255, 160, 160 }, { 000, 255, 255 } };
@@ -1005,9 +1017,13 @@ namespace LogitechGMineSweeper
             {
                 file = Path.Combine(systemPath, "Logitech MineSweeper/US.txt");
             }
-            else
+            else if (MineSweeper.KeyboardLayout == "DE")
             {
                 file = Path.Combine(systemPath, "Logitech MineSweeper/DE.txt");
+            }
+            else
+            {
+                file = Path.Combine(systemPath, "Logitech MineSweeper/UK.txt");
             }
 
             label3.Text = MineSweeper.Wins.ToString();
@@ -1015,7 +1031,7 @@ namespace LogitechGMineSweeper
             lTotal.Text = MineSweeper.Total.ToString();
             lBombsTotal.Text = File.ReadLines(file).Skip(MineSweeper.Bombs + 63).Take(1).First().ToString();
             lBombsLosses.Text = File.ReadLines(file).Skip(MineSweeper.Bombs + 42).Take(1).First().ToString();
-            lStats.Text = "Statistics for " + (MineSweeper.KeyboardLayout == "US" ? "US" : "DE") + " with " + MineSweeper.Bombs.ToString() + " Bombs:";
+            lStats.Text = "Statistics for " + (MineSweeper.KeyboardLayout == "US" ? "US" : MineSweeper.KeyboardLayout == "DE" ? "DE" : "UK") + " with " + MineSweeper.Bombs.ToString() + " Bombs:";
             lWinsX.Text = File.ReadLines(file).Skip(MineSweeper.Bombs + 21).Take(1).First().ToString();
             label5.Text = BestTime(MineSweeper.KeyboardLayout, MineSweeper.Bombs);
 

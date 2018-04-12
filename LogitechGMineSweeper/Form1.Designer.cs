@@ -645,7 +645,8 @@ namespace LogitechGMineSweeper
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "DE",
-            "US"});
+            "US",
+            "UK"});
             this.comboBox1.Location = new System.Drawing.Point(254, 222);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";

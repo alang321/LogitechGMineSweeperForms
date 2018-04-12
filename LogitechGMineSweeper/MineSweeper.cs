@@ -116,7 +116,7 @@ namespace LogitechGMineSweeper
             get { return keyboardLayout; }
             set
             {
-                if (value != "DE" && value != "US")
+                if (value != "DE" && value != "US" && value != "UK")
                 {
                     throw new Exception("Only German or Us layout allowed. (DE or US)");
                 }
@@ -666,10 +666,15 @@ namespace LogitechGMineSweeper
             {
                 file = Path.Combine(systemPath, "Logitech MineSweeper/US.txt");
             }
-            else
+            else if (keyboardLayout == "DE")
             {
                 file = Path.Combine(systemPath, "Logitech MineSweeper/DE.txt");
             }
+            else
+            {
+                file = Path.Combine(systemPath, "Logitech MineSweeper/UK.txt");
+            }
+
             string[] US = File.ReadAllLines(file);
             
             int line = Convert.ToInt32(US[bombs + 21 + add]) + 1;
