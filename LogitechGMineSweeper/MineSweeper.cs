@@ -24,6 +24,7 @@ namespace LogitechGMineSweeper
         static int losses = 0;
         static bool gameRunning;
         static bool firstMove = true;
+        public static int currentBack = 0;
         static string keyboardLayout = "US";
         static bool setBackground = false;
 
@@ -192,6 +193,8 @@ namespace LogitechGMineSweeper
         {
             //damit man mit jeder taste starten kanN
             InterceptKeys.last = "Add";
+
+            currentBack = 0;
 
             display = new int[21, 6];
             for (int i = 0; i < 21; i++)
@@ -380,8 +383,8 @@ namespace LogitechGMineSweeper
         static public void printLogiLED()
         {
             byte[] logiLED = new byte[LogitechGSDK.LOGI_LED_BITMAP_SIZE];
+            UpdateBackground();
 
-            
             for (int i = 0; i < display.GetLength(1); i++)
             {
                 for (int j = 0; j < display.GetLength(0); j++)
@@ -423,6 +426,28 @@ namespace LogitechGMineSweeper
                 LogitechGSDK.LogiLedSetLighting(Convert.ToInt32((Convert.ToDouble(colors[9, 2]) / 255.0) * 100), Convert.ToInt32((Convert.ToDouble(colors[9, 1]) / 255.0) * 100), Convert.ToInt32((Convert.ToDouble(colors[9, 0]) / 255.0) * 100));
             }
             LogitechGSDK.LogiLedSetLightingFromBitmap(logiLED);
+        }
+
+        static private void UpdateBackground()
+        {
+            if (currentBack == 0)
+            {
+                MineSweeper.colors[9, 0] = MineSweeper.colors[14, 0];
+                MineSweeper.colors[9, 1] = MineSweeper.colors[14, 1];
+                MineSweeper.colors[9, 2] = MineSweeper.colors[14, 2];
+            }
+            else if (currentBack == 1)
+            {
+                MineSweeper.colors[9, 0] = MineSweeper.colors[13, 0];
+                MineSweeper.colors[9, 1] = MineSweeper.colors[13, 1];
+                MineSweeper.colors[9, 2] = MineSweeper.colors[13, 2];
+            }
+            else
+            {
+                MineSweeper.colors[9, 0] = MineSweeper.colors[12, 0];
+                MineSweeper.colors[9, 1] = MineSweeper.colors[12, 1];
+                MineSweeper.colors[9, 2] = MineSweeper.colors[12, 2];
+            }
         }
 
         static private void colorToByte(byte[] logiLED, int start, byte blue, byte green, byte red)
@@ -500,7 +525,8 @@ namespace LogitechGMineSweeper
                 var principalForm = Application.OpenForms.OfType<Form1>().Single();
                 principalForm.UpdateStats();
                 principalForm.StopWatchDefeat();
-                
+                currentBack = 2;
+
                 losses++;
                 IncrementWinsBombs(21);
 
@@ -632,6 +658,7 @@ namespace LogitechGMineSweeper
         {
             //stop timer victory
             wins++;
+            currentBack = 1;
 
             IncrementWinsBombs(0);
 
