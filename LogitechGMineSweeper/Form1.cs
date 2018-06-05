@@ -45,9 +45,9 @@ namespace LogitechGMineSweeper
 
             comboBox1.SelectedIndex = Config.MineSweeper.KeyboardLayout.Index;
 
-            numericUpDown1.Value = Convert.ToDecimal(Config.MineSweeper.Bombs);
             numericUpDown1.Minimum = Config.MinBombs;
             numericUpDown1.Maximum = Config.MaxBombs;
+            numericUpDown1.Value = Convert.ToDecimal(Config.MineSweeper.Bombs);
 
             // Define the border style of the form to a dialog box.
             FormBorderStyle = FormBorderStyle.FixedDialog;
