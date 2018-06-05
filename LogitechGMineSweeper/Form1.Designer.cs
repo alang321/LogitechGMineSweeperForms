@@ -42,6 +42,8 @@ namespace LogitechGMineSweeper
             this.resetStats = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.bCounter = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -100,6 +102,7 @@ namespace LogitechGMineSweeper
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.tabPage4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -112,10 +115,9 @@ namespace LogitechGMineSweeper
             // 
             this.timer1.AutoSize = true;
             this.timer1.BackColor = System.Drawing.Color.Transparent;
-            this.timer1.Location = new System.Drawing.Point(344, 11);
-            this.timer1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.timer1.Location = new System.Drawing.Point(258, 9);
             this.timer1.Name = "timer1";
-            this.timer1.Size = new System.Drawing.Size(44, 17);
+            this.timer1.Size = new System.Drawing.Size(34, 13);
             this.timer1.TabIndex = 4;
             this.timer1.Text = "00:00";
             // 
@@ -124,10 +126,9 @@ namespace LogitechGMineSweeper
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(292, 11);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(219, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 19);
+            this.label6.Size = new System.Drawing.Size(35, 15);
             this.label6.TabIndex = 12;
             this.label6.Text = "Time:";
             // 
@@ -137,20 +138,18 @@ namespace LogitechGMineSweeper
             this.tabPage4.Controls.Add(this.resetColors);
             this.tabPage4.Controls.Add(this.resetStats);
             this.tabPage4.Controls.Add(this.button4);
-            this.tabPage4.Location = new System.Drawing.Point(4, 27);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage4.Location = new System.Drawing.Point(4, 23);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(371, 303);
+            this.tabPage4.Size = new System.Drawing.Size(276, 244);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Reset";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // resetSettings
             // 
-            this.resetSettings.Location = new System.Drawing.Point(128, 104);
-            this.resetSettings.Margin = new System.Windows.Forms.Padding(4);
+            this.resetSettings.Location = new System.Drawing.Point(96, 84);
             this.resetSettings.Name = "resetSettings";
-            this.resetSettings.Size = new System.Drawing.Size(112, 28);
+            this.resetSettings.Size = new System.Drawing.Size(84, 23);
             this.resetSettings.TabIndex = 18;
             this.resetSettings.Text = "Reset Settings";
             this.resetSettings.UseVisualStyleBackColor = true;
@@ -158,10 +157,9 @@ namespace LogitechGMineSweeper
             // 
             // resetColors
             // 
-            this.resetColors.Location = new System.Drawing.Point(12, 104);
-            this.resetColors.Margin = new System.Windows.Forms.Padding(4);
+            this.resetColors.Location = new System.Drawing.Point(9, 84);
             this.resetColors.Name = "resetColors";
-            this.resetColors.Size = new System.Drawing.Size(112, 28);
+            this.resetColors.Size = new System.Drawing.Size(84, 23);
             this.resetColors.TabIndex = 17;
             this.resetColors.Text = "Reset Colors";
             this.resetColors.UseVisualStyleBackColor = true;
@@ -169,10 +167,9 @@ namespace LogitechGMineSweeper
             // 
             // resetStats
             // 
-            this.resetStats.Location = new System.Drawing.Point(244, 104);
-            this.resetStats.Margin = new System.Windows.Forms.Padding(4);
+            this.resetStats.Location = new System.Drawing.Point(183, 84);
             this.resetStats.Name = "resetStats";
-            this.resetStats.Size = new System.Drawing.Size(112, 28);
+            this.resetStats.Size = new System.Drawing.Size(84, 23);
             this.resetStats.TabIndex = 16;
             this.resetStats.Text = "Reset Stats";
             this.resetStats.UseVisualStyleBackColor = true;
@@ -180,10 +177,9 @@ namespace LogitechGMineSweeper
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(128, 172);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(96, 140);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(112, 28);
+            this.button4.Size = new System.Drawing.Size(84, 23);
             this.button4.TabIndex = 15;
             this.button4.Text = "Reset All";
             this.button4.UseVisualStyleBackColor = true;
@@ -191,6 +187,8 @@ namespace LogitechGMineSweeper
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.button5);
+            this.tabPage3.Controls.Add(this.label30);
             this.tabPage3.Controls.Add(this.label28);
             this.tabPage3.Controls.Add(this.bCounter);
             this.tabPage3.Controls.Add(this.label14);
@@ -221,31 +219,47 @@ namespace LogitechGMineSweeper
             this.tabPage3.Controls.Add(this.bWin);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.bDefault);
-            this.tabPage3.Location = new System.Drawing.Point(4, 27);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 23);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(371, 303);
+            this.tabPage3.Size = new System.Drawing.Size(276, 244);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Colors";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Location = new System.Drawing.Point(76, 219);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(21, 23);
+            this.button5.TabIndex = 33;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(11, 223);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(56, 15);
+            this.label30.TabIndex = 32;
+            this.label30.Text = "Shift Key:";
+            // 
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(161, 274);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(121, 223);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(110, 19);
+            this.label28.Size = new System.Drawing.Size(86, 15);
             this.label28.TabIndex = 31;
             this.label28.Text = "Bomb Counter:";
             // 
             // bCounter
             // 
             this.bCounter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bCounter.Location = new System.Drawing.Point(309, 269);
-            this.bCounter.Margin = new System.Windows.Forms.Padding(4);
+            this.bCounter.Location = new System.Drawing.Point(240, 219);
             this.bCounter.Name = "bCounter";
-            this.bCounter.Size = new System.Drawing.Size(28, 28);
+            this.bCounter.Size = new System.Drawing.Size(21, 23);
             this.bCounter.TabIndex = 30;
             this.bCounter.UseVisualStyleBackColor = true;
             this.bCounter.Click += new System.EventHandler(this.bCounter_Click);
@@ -253,20 +267,18 @@ namespace LogitechGMineSweeper
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(161, 238);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(121, 193);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(114, 19);
+            this.label14.Size = new System.Drawing.Size(88, 15);
             this.label14.TabIndex = 29;
             this.label14.Text = "New Game Key:";
             // 
             // bNew
             // 
             this.bNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bNew.Location = new System.Drawing.Point(309, 232);
-            this.bNew.Margin = new System.Windows.Forms.Padding(4);
+            this.bNew.Location = new System.Drawing.Point(240, 187);
             this.bNew.Name = "bNew";
-            this.bNew.Size = new System.Drawing.Size(28, 28);
+            this.bNew.Size = new System.Drawing.Size(21, 23);
             this.bNew.TabIndex = 28;
             this.bNew.UseVisualStyleBackColor = true;
             this.bNew.Click += new System.EventHandler(this.bNew_Click);
@@ -274,20 +286,18 @@ namespace LogitechGMineSweeper
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(32, 273);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(24, 193);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(21, 19);
+            this.label15.Size = new System.Drawing.Size(16, 15);
             this.label15.TabIndex = 27;
             this.label15.Text = "6:";
             // 
             // b6
             // 
             this.b6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b6.Location = new System.Drawing.Point(84, 268);
-            this.b6.Margin = new System.Windows.Forms.Padding(4);
+            this.b6.Location = new System.Drawing.Point(76, 189);
             this.b6.Name = "b6";
-            this.b6.Size = new System.Drawing.Size(28, 28);
+            this.b6.Size = new System.Drawing.Size(21, 23);
             this.b6.TabIndex = 26;
             this.b6.UseVisualStyleBackColor = true;
             this.b6.Click += new System.EventHandler(this.b6_Click);
@@ -295,20 +305,18 @@ namespace LogitechGMineSweeper
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(32, 230);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(24, 163);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(21, 19);
+            this.label16.Size = new System.Drawing.Size(16, 15);
             this.label16.TabIndex = 25;
             this.label16.Text = "5:";
             // 
             // b5
             // 
             this.b5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b5.Location = new System.Drawing.Point(84, 225);
-            this.b5.Margin = new System.Windows.Forms.Padding(4);
+            this.b5.Location = new System.Drawing.Point(76, 158);
             this.b5.Name = "b5";
-            this.b5.Size = new System.Drawing.Size(28, 28);
+            this.b5.Size = new System.Drawing.Size(21, 23);
             this.b5.TabIndex = 24;
             this.b5.UseVisualStyleBackColor = true;
             this.b5.Click += new System.EventHandler(this.b5_Click);
@@ -316,20 +324,18 @@ namespace LogitechGMineSweeper
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(32, 187);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(24, 133);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(21, 19);
+            this.label17.Size = new System.Drawing.Size(16, 15);
             this.label17.TabIndex = 23;
             this.label17.Text = "4:";
             // 
             // b4
             // 
             this.b4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b4.Location = new System.Drawing.Point(84, 182);
-            this.b4.Margin = new System.Windows.Forms.Padding(4);
+            this.b4.Location = new System.Drawing.Point(76, 129);
             this.b4.Name = "b4";
-            this.b4.Size = new System.Drawing.Size(28, 28);
+            this.b4.Size = new System.Drawing.Size(21, 23);
             this.b4.TabIndex = 22;
             this.b4.UseVisualStyleBackColor = true;
             this.b4.Click += new System.EventHandler(this.b4_Click);
@@ -337,20 +343,18 @@ namespace LogitechGMineSweeper
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(32, 143);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(24, 104);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(21, 19);
+            this.label18.Size = new System.Drawing.Size(16, 15);
             this.label18.TabIndex = 21;
             this.label18.Text = "3:";
             // 
             // b3
             // 
             this.b3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b3.Location = new System.Drawing.Point(84, 138);
-            this.b3.Margin = new System.Windows.Forms.Padding(4);
+            this.b3.Location = new System.Drawing.Point(76, 100);
             this.b3.Name = "b3";
-            this.b3.Size = new System.Drawing.Size(28, 28);
+            this.b3.Size = new System.Drawing.Size(21, 23);
             this.b3.TabIndex = 20;
             this.b3.UseVisualStyleBackColor = true;
             this.b3.Click += new System.EventHandler(this.b3_Click);
@@ -358,20 +362,18 @@ namespace LogitechGMineSweeper
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(32, 100);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(24, 72);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(21, 19);
+            this.label19.Size = new System.Drawing.Size(16, 15);
             this.label19.TabIndex = 19;
             this.label19.Text = "2:";
             // 
             // b2
             // 
             this.b2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b2.Location = new System.Drawing.Point(84, 95);
-            this.b2.Margin = new System.Windows.Forms.Padding(4);
+            this.b2.Location = new System.Drawing.Point(76, 68);
             this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(28, 28);
+            this.b2.Size = new System.Drawing.Size(21, 23);
             this.b2.TabIndex = 18;
             this.b2.UseVisualStyleBackColor = true;
             this.b2.Click += new System.EventHandler(this.b2_Click);
@@ -379,20 +381,18 @@ namespace LogitechGMineSweeper
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(32, 57);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(24, 42);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(21, 19);
+            this.label20.Size = new System.Drawing.Size(16, 15);
             this.label20.TabIndex = 17;
             this.label20.Text = "1:";
             // 
             // b1
             // 
             this.b1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.b1.Location = new System.Drawing.Point(84, 52);
-            this.b1.Margin = new System.Windows.Forms.Padding(4);
+            this.b1.Location = new System.Drawing.Point(76, 38);
             this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(28, 28);
+            this.b1.Size = new System.Drawing.Size(21, 23);
             this.b1.TabIndex = 16;
             this.b1.UseVisualStyleBackColor = true;
             this.b1.Click += new System.EventHandler(this.b1_Click);
@@ -400,10 +400,9 @@ namespace LogitechGMineSweeper
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(32, 16);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(24, 13);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(21, 19);
+            this.label21.Size = new System.Drawing.Size(16, 15);
             this.label21.TabIndex = 15;
             this.label21.Text = "0:";
             // 
@@ -411,10 +410,9 @@ namespace LogitechGMineSweeper
             // 
             this.b0.BackColor = System.Drawing.Color.Transparent;
             this.b0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b0.Location = new System.Drawing.Point(84, 9);
-            this.b0.Margin = new System.Windows.Forms.Padding(4);
+            this.b0.Location = new System.Drawing.Point(76, 7);
             this.b0.Name = "b0";
-            this.b0.Size = new System.Drawing.Size(28, 28);
+            this.b0.Size = new System.Drawing.Size(21, 23);
             this.b0.TabIndex = 14;
             this.b0.UseVisualStyleBackColor = false;
             this.b0.Click += new System.EventHandler(this.b0_Click);
@@ -422,20 +420,18 @@ namespace LogitechGMineSweeper
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(161, 201);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(121, 163);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(104, 19);
+            this.label11.Size = new System.Drawing.Size(81, 15);
             this.label11.TabIndex = 11;
             this.label11.Text = "Covered Field:";
             // 
             // bClear
             // 
             this.bClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bClear.Location = new System.Drawing.Point(309, 195);
-            this.bClear.Margin = new System.Windows.Forms.Padding(4);
+            this.bClear.Location = new System.Drawing.Point(240, 158);
             this.bClear.Name = "bClear";
-            this.bClear.Size = new System.Drawing.Size(28, 28);
+            this.bClear.Size = new System.Drawing.Size(21, 23);
             this.bClear.TabIndex = 10;
             this.bClear.UseVisualStyleBackColor = true;
             this.bClear.Click += new System.EventHandler(this.bClear_Click);
@@ -443,20 +439,18 @@ namespace LogitechGMineSweeper
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(161, 164);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(121, 133);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(88, 19);
+            this.label12.Size = new System.Drawing.Size(69, 15);
             this.label12.TabIndex = 9;
             this.label12.Text = "Bomb Field:";
             // 
             // bBomb
             // 
             this.bBomb.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bBomb.Location = new System.Drawing.Point(309, 158);
-            this.bBomb.Margin = new System.Windows.Forms.Padding(4);
+            this.bBomb.Location = new System.Drawing.Point(240, 129);
             this.bBomb.Name = "bBomb";
-            this.bBomb.Size = new System.Drawing.Size(28, 28);
+            this.bBomb.Size = new System.Drawing.Size(21, 23);
             this.bBomb.TabIndex = 8;
             this.bBomb.UseVisualStyleBackColor = true;
             this.bBomb.Click += new System.EventHandler(this.bBomb_Click);
@@ -464,20 +458,18 @@ namespace LogitechGMineSweeper
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(161, 128);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(121, 104);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 19);
+            this.label13.Size = new System.Drawing.Size(59, 15);
             this.label13.TabIndex = 7;
             this.label13.Text = "Flag Field:";
             // 
             // bFlag
             // 
             this.bFlag.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bFlag.Location = new System.Drawing.Point(309, 121);
-            this.bFlag.Margin = new System.Windows.Forms.Padding(4);
+            this.bFlag.Location = new System.Drawing.Point(240, 97);
             this.bFlag.Name = "bFlag";
-            this.bFlag.Size = new System.Drawing.Size(28, 28);
+            this.bFlag.Size = new System.Drawing.Size(21, 23);
             this.bFlag.TabIndex = 6;
             this.bFlag.UseVisualStyleBackColor = true;
             this.bFlag.Click += new System.EventHandler(this.bFlag_Click);
@@ -485,20 +477,18 @@ namespace LogitechGMineSweeper
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(161, 89);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(121, 72);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 19);
+            this.label10.Size = new System.Drawing.Size(109, 15);
             this.label10.TabIndex = 5;
             this.label10.Text = "Background Defeat:";
             // 
             // bDefeat
             // 
             this.bDefeat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bDefeat.Location = new System.Drawing.Point(309, 83);
-            this.bDefeat.Margin = new System.Windows.Forms.Padding(4);
+            this.bDefeat.Location = new System.Drawing.Point(240, 68);
             this.bDefeat.Name = "bDefeat";
-            this.bDefeat.Size = new System.Drawing.Size(28, 28);
+            this.bDefeat.Size = new System.Drawing.Size(21, 23);
             this.bDefeat.TabIndex = 4;
             this.bDefeat.UseVisualStyleBackColor = true;
             this.bDefeat.Click += new System.EventHandler(this.bDefeat_Click);
@@ -506,20 +496,18 @@ namespace LogitechGMineSweeper
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(161, 52);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(121, 42);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(123, 19);
+            this.label9.Size = new System.Drawing.Size(95, 15);
             this.label9.TabIndex = 3;
             this.label9.Text = "Background Win:";
             // 
             // bWin
             // 
             this.bWin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bWin.Location = new System.Drawing.Point(309, 46);
-            this.bWin.Margin = new System.Windows.Forms.Padding(4);
+            this.bWin.Location = new System.Drawing.Point(240, 36);
             this.bWin.Name = "bWin";
-            this.bWin.Size = new System.Drawing.Size(28, 28);
+            this.bWin.Size = new System.Drawing.Size(21, 23);
             this.bWin.TabIndex = 2;
             this.bWin.UseVisualStyleBackColor = true;
             this.bWin.Click += new System.EventHandler(this.bWin_Click);
@@ -527,26 +515,25 @@ namespace LogitechGMineSweeper
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(161, 16);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(121, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(146, 19);
+            this.label8.Size = new System.Drawing.Size(113, 15);
             this.label8.TabIndex = 1;
             this.label8.Text = "Background Default:";
             // 
             // bDefault
             // 
             this.bDefault.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bDefault.Location = new System.Drawing.Point(309, 9);
-            this.bDefault.Margin = new System.Windows.Forms.Padding(4);
+            this.bDefault.Location = new System.Drawing.Point(240, 7);
             this.bDefault.Name = "bDefault";
-            this.bDefault.Size = new System.Drawing.Size(28, 28);
+            this.bDefault.Size = new System.Drawing.Size(21, 23);
             this.bDefault.TabIndex = 0;
             this.bDefault.UseVisualStyleBackColor = true;
             this.bDefault.Click += new System.EventHandler(this.bDefault_Click);
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.checkBox1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label2);
@@ -554,11 +541,10 @@ namespace LogitechGMineSweeper
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.comboBox1);
             this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 23);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(371, 303);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(276, 244);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Settings";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -566,10 +552,9 @@ namespace LogitechGMineSweeper
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(45, 100);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(34, 81);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 28);
+            this.button1.Size = new System.Drawing.Size(57, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Easy";
             this.button1.UseVisualStyleBackColor = true;
@@ -579,10 +564,9 @@ namespace LogitechGMineSweeper
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Open Sans", 7.8F);
-            this.label1.Location = new System.Drawing.Point(41, 59);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(31, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 19);
+            this.label1.Size = new System.Drawing.Size(46, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Bombs:";
             // 
@@ -590,18 +574,16 @@ namespace LogitechGMineSweeper
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Open Sans", 7.8F);
-            this.label2.Location = new System.Drawing.Point(41, 225);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(31, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 19);
+            this.label2.Size = new System.Drawing.Size(99, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Keyboard Layout:";
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Open Sans", 7.8F);
-            this.numericUpDown1.Location = new System.Drawing.Point(253, 57);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDown1.Location = new System.Drawing.Point(183, 46);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             25,
             0,
@@ -614,7 +596,7 @@ namespace LogitechGMineSweeper
             0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(60, 25);
+            this.numericUpDown1.Size = new System.Drawing.Size(45, 22);
             this.numericUpDown1.TabIndex = 5;
             this.numericUpDown1.TabStop = false;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -629,10 +611,9 @@ namespace LogitechGMineSweeper
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Open Sans", 7.8F);
-            this.button3.Location = new System.Drawing.Point(237, 100);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(171, 81);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(76, 28);
+            this.button3.Size = new System.Drawing.Size(57, 23);
             this.button3.TabIndex = 9;
             this.button3.Text = "Hard";
             this.button3.UseVisualStyleBackColor = true;
@@ -643,24 +624,18 @@ namespace LogitechGMineSweeper
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Open Sans", 7.8F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "DE",
-            "US",
-            "UK"});
-            this.comboBox1.Location = new System.Drawing.Point(254, 222);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(183, 180);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(59, 26);
+            this.comboBox1.Size = new System.Drawing.Size(45, 22);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(141, 100);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(103, 81);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(76, 28);
+            this.button2.Size = new System.Drawing.Size(57, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "Medium";
             this.button2.UseVisualStyleBackColor = true;
@@ -673,11 +648,10 @@ namespace LogitechGMineSweeper
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Open Sans", 7.8F);
-            this.tabControl1.Location = new System.Drawing.Point(11, 9);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.tabControl1.Location = new System.Drawing.Point(8, 7);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(379, 334);
+            this.tabControl1.Size = new System.Drawing.Size(284, 271);
             this.tabControl1.TabIndex = 16;
             // 
             // tabPage2
@@ -699,9 +673,10 @@ namespace LogitechGMineSweeper
             this.tabPage2.Controls.Add(this.label3);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Location = new System.Drawing.Point(4, 23);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(371, 303);
+            this.tabPage2.Size = new System.Drawing.Size(276, 244);
             this.tabPage2.TabIndex = 4;
             this.tabPage2.Text = "Statistics";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -709,20 +684,18 @@ namespace LogitechGMineSweeper
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(56, 258);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(42, 210);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(96, 19);
+            this.label23.Size = new System.Drawing.Size(74, 15);
             this.label23.TabIndex = 30;
             this.label23.Text = "Total Games:";
             // 
             // lBombsTotal
             // 
-            this.lBombsTotal.Location = new System.Drawing.Point(231, 258);
-            this.lBombsTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lBombsTotal.Location = new System.Drawing.Point(173, 210);
             this.lBombsTotal.Name = "lBombsTotal";
             this.lBombsTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lBombsTotal.Size = new System.Drawing.Size(108, 19);
+            this.lBombsTotal.Size = new System.Drawing.Size(81, 15);
             this.lBombsTotal.TabIndex = 29;
             this.lBombsTotal.Text = "2";
             this.lBombsTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -730,29 +703,26 @@ namespace LogitechGMineSweeper
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(56, 234);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Location = new System.Drawing.Point(42, 190);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(57, 19);
+            this.label29.Size = new System.Drawing.Size(44, 15);
             this.label29.TabIndex = 28;
             this.label29.Text = "Losses:";
             // 
             // lBombsLosses
             // 
-            this.lBombsLosses.Location = new System.Drawing.Point(227, 234);
-            this.lBombsLosses.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lBombsLosses.Location = new System.Drawing.Point(170, 190);
             this.lBombsLosses.Name = "lBombsLosses";
-            this.lBombsLosses.Size = new System.Drawing.Size(112, 19);
+            this.lBombsLosses.Size = new System.Drawing.Size(84, 15);
             this.lBombsLosses.TabIndex = 27;
             this.lBombsLosses.Text = "2";
             this.lBombsLosses.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lWinsX
             // 
-            this.lWinsX.Location = new System.Drawing.Point(227, 210);
-            this.lWinsX.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lWinsX.Location = new System.Drawing.Point(170, 171);
             this.lWinsX.Name = "lWinsX";
-            this.lWinsX.Size = new System.Drawing.Size(112, 19);
+            this.lWinsX.Size = new System.Drawing.Size(84, 15);
             this.lWinsX.TabIndex = 26;
             this.lWinsX.Text = "2";
             this.lWinsX.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -760,30 +730,27 @@ namespace LogitechGMineSweeper
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(56, 210);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(42, 171);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(46, 19);
+            this.label27.Size = new System.Drawing.Size(35, 15);
             this.label27.TabIndex = 25;
             this.label27.Text = "Wins:";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(56, 108);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(42, 88);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(96, 19);
+            this.label25.Size = new System.Drawing.Size(74, 15);
             this.label25.TabIndex = 24;
             this.label25.Text = "Total Games:";
             // 
             // lTotal
             // 
-            this.lTotal.Location = new System.Drawing.Point(231, 108);
-            this.lTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lTotal.Location = new System.Drawing.Point(173, 88);
             this.lTotal.Name = "lTotal";
             this.lTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lTotal.Size = new System.Drawing.Size(108, 19);
+            this.lTotal.Size = new System.Drawing.Size(81, 15);
             this.lTotal.TabIndex = 23;
             this.lTotal.Text = "2";
             this.lTotal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -791,19 +758,17 @@ namespace LogitechGMineSweeper
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(56, 84);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(42, 68);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(57, 19);
+            this.label26.Size = new System.Drawing.Size(44, 15);
             this.label26.TabIndex = 22;
             this.label26.Text = "Losses:";
             // 
             // lLosses
             // 
-            this.lLosses.Location = new System.Drawing.Point(227, 84);
-            this.lLosses.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lLosses.Location = new System.Drawing.Point(170, 68);
             this.lLosses.Name = "lLosses";
-            this.lLosses.Size = new System.Drawing.Size(112, 19);
+            this.lLosses.Size = new System.Drawing.Size(84, 15);
             this.lLosses.TabIndex = 21;
             this.lLosses.Text = "2";
             this.lLosses.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -811,18 +776,20 @@ namespace LogitechGMineSweeper
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(60, 169);
+            this.label24.Location = new System.Drawing.Point(45, 137);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(0, 19);
+            this.label24.Size = new System.Drawing.Size(0, 15);
             this.label24.TabIndex = 20;
             // 
             // lStats
             // 
             this.lStats.AutoSize = true;
             this.lStats.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lStats.Location = new System.Drawing.Point(34, 150);
+            this.lStats.Location = new System.Drawing.Point(26, 122);
+            this.lStats.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lStats.Name = "lStats";
-            this.lStats.Size = new System.Drawing.Size(266, 23);
+            this.lStats.Size = new System.Drawing.Size(227, 19);
             this.lStats.TabIndex = 19;
             this.lStats.Text = "Statistics for DE with 13 Bombs:";
             // 
@@ -830,38 +797,36 @@ namespace LogitechGMineSweeper
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Open Sans Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(34, 24);
+            this.label22.Location = new System.Drawing.Point(26, 20);
+            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(146, 23);
+            this.label22.Size = new System.Drawing.Size(124, 19);
             this.label22.TabIndex = 18;
             this.label22.Text = "Global Statistics:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 60);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(42, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 19);
+            this.label4.Size = new System.Drawing.Size(35, 15);
             this.label4.TabIndex = 16;
             this.label4.Text = "Wins:";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(227, 60);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(170, 49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 19);
+            this.label3.Size = new System.Drawing.Size(84, 15);
             this.label3.TabIndex = 14;
             this.label3.Text = "2";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(227, 186);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(170, 151);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 19);
+            this.label5.Size = new System.Drawing.Size(84, 15);
             this.label5.TabIndex = 15;
             this.label5.Text = "30:00";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -869,10 +834,9 @@ namespace LogitechGMineSweeper
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(56, 186);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(42, 151);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(79, 19);
+            this.label7.Size = new System.Drawing.Size(60, 15);
             this.label7.TabIndex = 17;
             this.label7.Text = "Best Time:";
             // 
@@ -882,18 +846,30 @@ namespace LogitechGMineSweeper
             this.notifyIcon1.Text = "Logitech MineSweeper";
             this.notifyIcon1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseClick);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox1.Location = new System.Drawing.Point(34, 135);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(194, 19);
+            this.checkBox1.TabIndex = 11;
+            this.checkBox1.Text = "Background Color for Shift Keys:";
+            this.checkBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(399, 353);
+            this.ClientSize = new System.Drawing.Size(299, 287);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.timer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Logitech MineSweeper";
             this.Resize += new System.EventHandler(this.Form1_Resize);
@@ -981,5 +957,8 @@ namespace LogitechGMineSweeper
         private NotifyIcon notifyIcon1;
         private Button bCounter;
         private Label label28;
+        private Button button5;
+        private Label label30;
+        private CheckBox checkBox1;
     }
 }
