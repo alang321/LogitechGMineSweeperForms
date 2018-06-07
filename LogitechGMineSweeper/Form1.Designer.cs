@@ -147,39 +147,39 @@ namespace LogitechGMineSweeper
             // 
             // resetSettings
             // 
-            this.resetSettings.Location = new System.Drawing.Point(96, 84);
+            this.resetSettings.Location = new System.Drawing.Point(94, 84);
             this.resetSettings.Name = "resetSettings";
-            this.resetSettings.Size = new System.Drawing.Size(84, 23);
+            this.resetSettings.Size = new System.Drawing.Size(87, 23);
             this.resetSettings.TabIndex = 18;
-            this.resetSettings.Text = "Reset Settings";
+            this.resetSettings.Text = "Settings";
             this.resetSettings.UseVisualStyleBackColor = true;
             this.resetSettings.Click += new System.EventHandler(this.resetSettings_Click);
             // 
             // resetColors
             // 
-            this.resetColors.Location = new System.Drawing.Point(9, 84);
+            this.resetColors.Location = new System.Drawing.Point(4, 84);
             this.resetColors.Name = "resetColors";
             this.resetColors.Size = new System.Drawing.Size(84, 23);
             this.resetColors.TabIndex = 17;
-            this.resetColors.Text = "Reset Colors";
+            this.resetColors.Text = "Colors";
             this.resetColors.UseVisualStyleBackColor = true;
             this.resetColors.Click += new System.EventHandler(this.resetColors_Click);
             // 
             // resetStats
             // 
-            this.resetStats.Location = new System.Drawing.Point(183, 84);
+            this.resetStats.Location = new System.Drawing.Point(187, 84);
             this.resetStats.Name = "resetStats";
             this.resetStats.Size = new System.Drawing.Size(84, 23);
             this.resetStats.TabIndex = 16;
-            this.resetStats.Text = "Reset Stats";
+            this.resetStats.Text = "Statistics";
             this.resetStats.UseVisualStyleBackColor = true;
             this.resetStats.Click += new System.EventHandler(this.resetStats_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(96, 140);
+            this.button4.Location = new System.Drawing.Point(94, 140);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 23);
+            this.button4.Size = new System.Drawing.Size(88, 23);
             this.button4.TabIndex = 15;
             this.button4.Text = "Reset All";
             this.button4.UseVisualStyleBackColor = true;
@@ -231,7 +231,7 @@ namespace LogitechGMineSweeper
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Location = new System.Drawing.Point(76, 219);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(21, 23);
+            this.button5.Size = new System.Drawing.Size(23, 23);
             this.button5.TabIndex = 33;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -259,7 +259,7 @@ namespace LogitechGMineSweeper
             this.bCounter.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bCounter.Location = new System.Drawing.Point(240, 219);
             this.bCounter.Name = "bCounter";
-            this.bCounter.Size = new System.Drawing.Size(21, 23);
+            this.bCounter.Size = new System.Drawing.Size(23, 23);
             this.bCounter.TabIndex = 30;
             this.bCounter.UseVisualStyleBackColor = true;
             this.bCounter.Click += new System.EventHandler(this.bCounter_Click);
@@ -278,7 +278,7 @@ namespace LogitechGMineSweeper
             this.bNew.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bNew.Location = new System.Drawing.Point(240, 187);
             this.bNew.Name = "bNew";
-            this.bNew.Size = new System.Drawing.Size(21, 23);
+            this.bNew.Size = new System.Drawing.Size(23, 23);
             this.bNew.TabIndex = 28;
             this.bNew.UseVisualStyleBackColor = true;
             this.bNew.Click += new System.EventHandler(this.bNew_Click);
@@ -297,7 +297,7 @@ namespace LogitechGMineSweeper
             this.b6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b6.Location = new System.Drawing.Point(76, 189);
             this.b6.Name = "b6";
-            this.b6.Size = new System.Drawing.Size(21, 23);
+            this.b6.Size = new System.Drawing.Size(23, 23);
             this.b6.TabIndex = 26;
             this.b6.UseVisualStyleBackColor = true;
             this.b6.Click += new System.EventHandler(this.b6_Click);
@@ -316,7 +316,7 @@ namespace LogitechGMineSweeper
             this.b5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b5.Location = new System.Drawing.Point(76, 158);
             this.b5.Name = "b5";
-            this.b5.Size = new System.Drawing.Size(21, 23);
+            this.b5.Size = new System.Drawing.Size(23, 23);
             this.b5.TabIndex = 24;
             this.b5.UseVisualStyleBackColor = true;
             this.b5.Click += new System.EventHandler(this.b5_Click);
@@ -335,7 +335,7 @@ namespace LogitechGMineSweeper
             this.b4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b4.Location = new System.Drawing.Point(76, 129);
             this.b4.Name = "b4";
-            this.b4.Size = new System.Drawing.Size(21, 23);
+            this.b4.Size = new System.Drawing.Size(23, 23);
             this.b4.TabIndex = 22;
             this.b4.UseVisualStyleBackColor = true;
             this.b4.Click += new System.EventHandler(this.b4_Click);
@@ -354,7 +354,7 @@ namespace LogitechGMineSweeper
             this.b3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b3.Location = new System.Drawing.Point(76, 100);
             this.b3.Name = "b3";
-            this.b3.Size = new System.Drawing.Size(21, 23);
+            this.b3.Size = new System.Drawing.Size(23, 23);
             this.b3.TabIndex = 20;
             this.b3.UseVisualStyleBackColor = true;
             this.b3.Click += new System.EventHandler(this.b3_Click);
@@ -373,7 +373,7 @@ namespace LogitechGMineSweeper
             this.b2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b2.Location = new System.Drawing.Point(76, 68);
             this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(21, 23);
+            this.b2.Size = new System.Drawing.Size(23, 23);
             this.b2.TabIndex = 18;
             this.b2.UseVisualStyleBackColor = true;
             this.b2.Click += new System.EventHandler(this.b2_Click);
@@ -392,7 +392,7 @@ namespace LogitechGMineSweeper
             this.b1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.b1.Location = new System.Drawing.Point(76, 38);
             this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(21, 23);
+            this.b1.Size = new System.Drawing.Size(23, 23);
             this.b1.TabIndex = 16;
             this.b1.UseVisualStyleBackColor = true;
             this.b1.Click += new System.EventHandler(this.b1_Click);
@@ -412,7 +412,7 @@ namespace LogitechGMineSweeper
             this.b0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b0.Location = new System.Drawing.Point(76, 7);
             this.b0.Name = "b0";
-            this.b0.Size = new System.Drawing.Size(21, 23);
+            this.b0.Size = new System.Drawing.Size(23, 23);
             this.b0.TabIndex = 14;
             this.b0.UseVisualStyleBackColor = false;
             this.b0.Click += new System.EventHandler(this.b0_Click);
@@ -431,7 +431,7 @@ namespace LogitechGMineSweeper
             this.bClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bClear.Location = new System.Drawing.Point(240, 158);
             this.bClear.Name = "bClear";
-            this.bClear.Size = new System.Drawing.Size(21, 23);
+            this.bClear.Size = new System.Drawing.Size(23, 23);
             this.bClear.TabIndex = 10;
             this.bClear.UseVisualStyleBackColor = true;
             this.bClear.Click += new System.EventHandler(this.bClear_Click);
@@ -450,7 +450,7 @@ namespace LogitechGMineSweeper
             this.bBomb.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bBomb.Location = new System.Drawing.Point(240, 129);
             this.bBomb.Name = "bBomb";
-            this.bBomb.Size = new System.Drawing.Size(21, 23);
+            this.bBomb.Size = new System.Drawing.Size(23, 23);
             this.bBomb.TabIndex = 8;
             this.bBomb.UseVisualStyleBackColor = true;
             this.bBomb.Click += new System.EventHandler(this.bBomb_Click);
@@ -469,7 +469,7 @@ namespace LogitechGMineSweeper
             this.bFlag.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bFlag.Location = new System.Drawing.Point(240, 97);
             this.bFlag.Name = "bFlag";
-            this.bFlag.Size = new System.Drawing.Size(21, 23);
+            this.bFlag.Size = new System.Drawing.Size(23, 23);
             this.bFlag.TabIndex = 6;
             this.bFlag.UseVisualStyleBackColor = true;
             this.bFlag.Click += new System.EventHandler(this.bFlag_Click);
@@ -488,7 +488,7 @@ namespace LogitechGMineSweeper
             this.bDefeat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bDefeat.Location = new System.Drawing.Point(240, 68);
             this.bDefeat.Name = "bDefeat";
-            this.bDefeat.Size = new System.Drawing.Size(21, 23);
+            this.bDefeat.Size = new System.Drawing.Size(23, 23);
             this.bDefeat.TabIndex = 4;
             this.bDefeat.UseVisualStyleBackColor = true;
             this.bDefeat.Click += new System.EventHandler(this.bDefeat_Click);
@@ -507,7 +507,7 @@ namespace LogitechGMineSweeper
             this.bWin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bWin.Location = new System.Drawing.Point(240, 36);
             this.bWin.Name = "bWin";
-            this.bWin.Size = new System.Drawing.Size(21, 23);
+            this.bWin.Size = new System.Drawing.Size(23, 23);
             this.bWin.TabIndex = 2;
             this.bWin.UseVisualStyleBackColor = true;
             this.bWin.Click += new System.EventHandler(this.bWin_Click);
@@ -526,7 +526,7 @@ namespace LogitechGMineSweeper
             this.bDefault.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.bDefault.Location = new System.Drawing.Point(240, 7);
             this.bDefault.Name = "bDefault";
-            this.bDefault.Size = new System.Drawing.Size(21, 23);
+            this.bDefault.Size = new System.Drawing.Size(23, 23);
             this.bDefault.TabIndex = 0;
             this.bDefault.UseVisualStyleBackColor = true;
             this.bDefault.Click += new System.EventHandler(this.bDefault_Click);
@@ -553,7 +553,8 @@ namespace LogitechGMineSweeper
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox1.Location = new System.Drawing.Point(34, 135);
+            this.checkBox1.Location = new System.Drawing.Point(30, 135);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(0);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(194, 19);
             this.checkBox1.TabIndex = 11;
@@ -596,7 +597,7 @@ namespace LogitechGMineSweeper
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Open Sans", 7.8F);
-            this.numericUpDown1.Location = new System.Drawing.Point(183, 46);
+            this.numericUpDown1.Location = new System.Drawing.Point(179, 46);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             25,
             0,
@@ -624,7 +625,7 @@ namespace LogitechGMineSweeper
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Open Sans", 7.8F);
-            this.button3.Location = new System.Drawing.Point(166, 81);
+            this.button3.Location = new System.Drawing.Point(162, 81);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(62, 23);
             this.button3.TabIndex = 9;
@@ -637,7 +638,7 @@ namespace LogitechGMineSweeper
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Font = new System.Drawing.Font("Open Sans", 7.8F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(183, 180);
+            this.comboBox1.Location = new System.Drawing.Point(179, 180);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(45, 22);
             this.comboBox1.TabIndex = 6;
@@ -646,7 +647,7 @@ namespace LogitechGMineSweeper
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Open Sans", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(100, 81);
+            this.button2.Location = new System.Drawing.Point(98, 81);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(62, 23);
             this.button2.TabIndex = 8;

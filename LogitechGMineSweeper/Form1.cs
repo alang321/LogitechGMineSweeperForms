@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 using System.Diagnostics;
 using System.Timers;
-using System.Threading;
 
 namespace LogitechGMineSweeper
 {
@@ -100,17 +92,17 @@ namespace LogitechGMineSweeper
 
         private void button3_Click(object sender, EventArgs e)
         {
-            numericUpDown1.Value = Config.Hard;
+            numericUpDown1.Value = Config.MineSweeper.KeyboardLayout.Hard;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            numericUpDown1.Value = Config.Medium;
+            numericUpDown1.Value = Config.MineSweeper.KeyboardLayout.Medium;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            numericUpDown1.Value = Config.Easy;
+            numericUpDown1.Value = Config.MineSweeper.KeyboardLayout.Easy;
         }
 
         void numericUpDown1_MouseWheel(object sender, MouseEventArgs e)
@@ -428,6 +420,7 @@ namespace LogitechGMineSweeper
         {
             Config.MineSweeper.ColorsFile.ResetToDefault();
             Config.MineSweeper.Colors = Config.MineSweeper.ColorsFile.SavedColors;
+            UpdateColors();
             Config.MineSweeper.PrintLogiLED();
         }
 

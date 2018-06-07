@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LogitechGMineSweeper
 {
@@ -56,27 +52,11 @@ namespace LogitechGMineSweeper
 
         #endregion
 
-        #region Bomb count values
-
-        public static int Hard { get; } = 14;
-        public static int Medium { get; } = 10;
-        public static int Easy { get; } = 7;
+        #region Max Min Bombs
 
         //values between 0-44 and maxbombs bigger than minbombs
         public static int MaxBombs { get; } = 40;
         public static int MinBombs { get; } = 3;
-
-        public static int NumUDstartvalue { get; } = BombsDefault;
-
-        #endregion
-
-        #region TextColor 
-
-        //for which colors foreground is important everything but background colors because they dont have text over them, if not in this array color is set to transparent
-        public static int[] ForegroundColorImportant { get; } = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 15, 16 };
-
-        //Threshold for when the foreground color is white and black, when total rgb color is below this value foreground color is white else its black
-        public static int ForegroundThreshold { get; set; } = 270;
 
         #endregion
 
@@ -109,7 +89,12 @@ namespace LogitechGMineSweeper
                                 81, 87, 69, 82, 84, 90, 85, 73, 79, 80, 186, 187,
                                  65, 83, 68, 70, 71, 72, 74, 75, 76, 192, 222, 191,
                                 226, 89, 88, 67, 86, 66, 78, 77, 188, 190, 189, -1, /*Add Key*/ 107 },
-                    (int)Layout.DE
+                    //easy
+                    7,
+                    //medium
+                    10,
+                    //hard
+                    14
                 ),
             //US
             new KeyboardLayout
@@ -128,7 +113,12 @@ namespace LogitechGMineSweeper
                                 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 219, 221,
                                  65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 222, -1,
                                 -1, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, -1, /*Add Key*/ 107 },
-                    (int)Layout.US
+                    //easy
+                    7,
+                    //medium
+                    10,
+                    //hard
+                    14
                 ),
             //UK
             new KeyboardLayout
@@ -147,7 +137,12 @@ namespace LogitechGMineSweeper
                                 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 219, 221,
                                  65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 192, 222,
                                 220, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, -1, /*Add Key*/ 107 },
-                    (int)Layout.UK
+                    //easy
+                    7,
+                    //medium
+                    10,
+                    //hard
+                    14
                 ),
             //ITA
             new KeyboardLayout
@@ -166,7 +161,12 @@ namespace LogitechGMineSweeper
                                 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 186, 187,
                                  65, 83, 68, 70, 71, 72, 74, 75, 76, 192, 222, 191,
                                 226, 90, 88, 67, 86, 66, 78, 77, 188, 190, 189, -1, /*Add Key*/ 107 },
-                    (int)Layout.IT
+                    //easy
+                    7,
+                    //medium
+                    10,
+                    //hard
+                    14
                 )
         };
 
@@ -178,8 +178,5 @@ namespace LogitechGMineSweeper
 
         //Set Logitech Logo to background color makes screen flash so not used
         public static bool SetLogiLogo { get; set; } = false;
-
-        //array for the words displayed in the color picker popup
-        public static string[] ColorPickerTitles { get; } = { "0 Bombs", "1 Bomb", "2 Bombs", "3 Bombs", "4 Bombs", "5 Bombs", "6 Bombs", "Bomb Field", "Covered Field", "Offboard", "Flag", "New Game Key", "Defeat Background", "Victory Background", "Default Background", "Bomb Counter", "Shift Keys" };
     }
 }
