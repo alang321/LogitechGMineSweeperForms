@@ -63,10 +63,9 @@ namespace LogitechGMineSweeper
         #region keyboard layouts array
 
         //to add layout add everything in keyboardlayout class
-        //the enabledKeys array controls which keys are enabled, here for example on the us keyboard the bottom left is disabled as it is not present on the keyboard so no bombs will be generated there
         //then add the keyids of the corresponding keys on the used layout, key ids are printed to console in debug mode
-        //then add a keyboard display in folder keyboardlayouts in InitKeyboardLayoutsArray function like its been done beofre
-        //add save file in init keyboardlayout array
+        //to disable key enter -1 in the key ids array
+        //then add a keyboard display in folder keyboardlayouts in InitKeyboardLayoutsArray function like its been done before
         public enum Layout { DE, US, UK, IT }
 
         //Keyboard Layout Objects
@@ -79,22 +78,11 @@ namespace LogitechGMineSweeper
                     new SaveFileStatitics(Path.Combine(Directory, "DE.txt")),
                     //text
                     "DE",
-                    //present/enabled keys
-                    new bool[,]{{ true, true, true, true, true, true, true, true, true, true, true, true },
-                                 { true, true, true, true, true, true, true, true, true, true, true, true },
-                                  { true, true, true, true, true, true, true, true, true, true, true, true },
-                                 { true, true, true, true, true, true, true, true, true, true, true, false }},
                     //the keyids
                     new int[]{ 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 219, 221,
                                 81, 87, 69, 82, 84, 90, 85, 73, 79, 80, 186, 187,
                                  65, 83, 68, 70, 71, 72, 74, 75, 76, 192, 222, 191,
-                                226, 89, 88, 67, 86, 66, 78, 77, 188, 190, 189, -1, /*Add Key*/ 107 },
-                    //easy
-                    7,
-                    //medium
-                    10,
-                    //hard
-                    14
+                                226, 89, 88, 67, 86, 66, 78, 77, 188, 190, 189, -1, /*Add Key*/ 107 }
                 ),
             //US
             new KeyboardLayout
@@ -103,22 +91,11 @@ namespace LogitechGMineSweeper
                     new SaveFileStatitics(Path.Combine(Directory, "US.txt")),
                     //text
                     "US",
-                    //present/enabled keys
-                    new bool[,]{{ true, true, true, true, true, true, true, true, true, true, true, true },
-                                 { true, true, true, true, true, true, true, true, true, true, true, true },
-                                  { true, true, true, true, true, true, true, true, true, true, true,false },
-                                 {false, true, true, true, true, true, true, true, true, true, true,false }},
                     //the keyids
                     new int[]{ 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 189, 187,
                                 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 219, 221,
                                  65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 222, -1,
-                                -1, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, -1, /*Add Key*/ 107 },
-                    //easy
-                    7,
-                    //medium
-                    10,
-                    //hard
-                    14
+                                -1, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, -1, /*Add Key*/ 107 }
                 ),
             //UK
             new KeyboardLayout
@@ -127,22 +104,11 @@ namespace LogitechGMineSweeper
                     new SaveFileStatitics(Path.Combine(Directory, "UK.txt")),
                     //text
                     "UK",
-                    //present/enabled keys
-                    new bool[,]{{ true, true, true, true, true, true, true, true, true, true, true, true },
-                                 { true, true, true, true, true, true, true, true, true, true, true, true },
-                                  { true, true, true, true, true, true, true, true, true, true, true, true },
-                                 { true, true, true, true, true, true, true, true, true, true, true,false }},
                     //the keyids
                     new int[]{ 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 189, 187,
                                 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 219, 221,
                                  65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 192, 222,
-                                220, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, -1, /*Add Key*/ 107 },
-                    //easy
-                    7,
-                    //medium
-                    10,
-                    //hard
-                    14
+                                220, 90, 88, 67, 86, 66, 78, 77, 188, 190, 191, -1, /*Add Key*/ 107 }
                 ),
             //ITA
             new KeyboardLayout
@@ -151,28 +117,15 @@ namespace LogitechGMineSweeper
                     new SaveFileStatitics(Path.Combine(Directory, "ITA.txt")),
                     //text
                     "IT",
-                    //present/enabled keys
-                    new bool[,]{{ true, true, true, true, true, true, true, true, true, true, true, true },
-                                 { true, true, true, true, true, true, true, true, true, true, true, true },
-                                  { true, true, true, true, true, true, true, true, true, true, true, true },
-                                 { true, true, true, true, true, true, true, true, true, true, true,false }},
                     //the keyids
                     new int[]{ 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 219, 221,
                                 81, 87, 69, 82, 84, 89, 85, 73, 79, 80, 186, 187,
                                  65, 83, 68, 70, 71, 72, 74, 75, 76, 192, 222, 191,
-                                226, 90, 88, 67, 86, 66, 78, 77, 188, 190, 189, -1, /*Add Key*/ 107 },
-                    //easy
-                    7,
-                    //medium
-                    10,
-                    //hard
-                    14
+                                226, 90, 88, 67, 86, 66, 78, 77, 188, 190, 189, -1, /*Add Key*/ 107 }
                 )
         };
 
         #endregion
-
-        public static MineSweeper MineSweeper { get; set; }
 
         public static string Version { get; } = "2.3.0";
 
